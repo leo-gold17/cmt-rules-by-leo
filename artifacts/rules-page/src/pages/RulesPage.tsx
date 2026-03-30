@@ -217,13 +217,14 @@ const penalties = [
 ];
 
 const admins = [
-  { name: "Leo", role: "Owner & Head Admin" },
-  { name: "Admin Name 2", role: "Administrator" },
-  { name: "Admin Name 3", role: "Administrator" },
+  { name: "Leo", role: "Head Admin • Comments & Community Admin" },
+  { name: "Lucky", role: "Head Admin • Site Contributor" },
+  { name: "Verxix", role: "Admin • Content & Site" },
+  { name: "Spike", role: "Admin • Design" },
 ];
 
 const mods = [
-  { name: "Mod Name 1", role: "Comment Moderator" },
+  { name: "Shadow Jp", role: "Comment Moderator" },
   { name: "Mod Name 2", role: "Comment Moderator" },
   { name: "Mod Name 3", role: "Comment Moderator" },
   { name: "Mod Name 4", role: "Comment Moderator" },
