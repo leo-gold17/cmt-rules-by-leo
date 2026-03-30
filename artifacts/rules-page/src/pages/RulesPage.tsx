@@ -213,7 +213,7 @@ const penalties = [
 
 const admins = [
   { name: "Leo (The Goat)", role: "Head Admin • Comments Section & Community Admin" },
-  { name: "Lucky", role: "Head Admin • Site Ops" },
+  { name: "Lucky", role: "Head Admin • Site Contributor" },
   { name: "Verxix", role: "Head Admin • Content & Site" },
   { name: "Spike", role: "Head Admin • Designer" },
 ];
@@ -221,9 +221,9 @@ const admins = [
 const mods = [
   { name: "Zero", role: "Senior Admin" },
   { name: "Shadow Jp", role: "Comment Moderator" },
-  { name: "Mod Name 3", role: "Comment Moderator" },
-  { name: "Mod Name 4", role: "Comment Moderator" },
-];
+  { name: "", role: "Comment Moderator" },
+  { name: "", role: ""},
+  ];
 
 function GlassCard({ children, style, className = "" }: { children: React.ReactNode; style?: React.CSSProperties; className?: string }) {
   return (
