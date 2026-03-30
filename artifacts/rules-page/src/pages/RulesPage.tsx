@@ -15,7 +15,6 @@ import {
   UserX,
   UserMinus,
   Eye,
-  UserRound,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -31,13 +30,8 @@ function formatCount(n: number): string {
 
 function SiteStats() {
   const [totalViews, setTotalViews] = useState<number | null>(null);
-  const [yourVisits, setYourVisits] = useState<number>(0);
 
   useEffect(() => {
-    const visits = parseInt(localStorage.getItem("anikage_visits") || "0", 10) + 1;
-    localStorage.setItem("anikage_visits", String(visits));
-    setYourVisits(visits);
-
     fetch(`https://api.counterapi.dev/v1/${COUNTER_NAMESPACE}/${COUNTER_KEY}/up`)
       .then((r) => r.json())
       .then((data) => {
@@ -48,7 +42,7 @@ function SiteStats() {
 
   return (
     <div
-      className="rounded-2xl px-6 py-5 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-10 mt-8"
+      className="rounded-2xl px-6 py-5 flex items-center justify-center gap-3 mt-8"
       style={{
         background: "linear-gradient(135deg, rgba(99,102,241,0.07) 0%, rgba(139,92,246,0.05) 100%)",
         backdropFilter: "blur(20px)",
@@ -57,40 +51,21 @@ function SiteStats() {
         boxShadow: "inset 0 1px 0 rgba(255,255,255,0.07), 0 8px 32px rgba(99,102,241,0.06)",
       }}
     >
-      <div className="flex items-center gap-3">
-        <div
-          className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
-          style={{ background: "rgba(99,102,241,0.15)", border: "1px solid rgba(99,102,241,0.28)" }}
-        >
-          <Eye className="w-4 h-4 text-indigo-400" />
-        </div>
-        <div className="text-left">
-          <p className="text-white/80 font-bold text-xl leading-none tabular-nums">
-            {totalViews === null ? (
-              <span className="inline-block w-12 h-5 rounded bg-white/10 animate-pulse align-middle" />
-            ) : (
-              formatCount(totalViews)
-            )}
-          </p>
-          <p className="text-indigo-400/60 text-xs mt-0.5 font-medium">Total Page Views</p>
-        </div>
+      <div
+        className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
+        style={{ background: "rgba(99,102,241,0.15)", border: "1px solid rgba(99,102,241,0.28)" }}
+      >
+        <Eye className="w-4 h-4 text-indigo-400" />
       </div>
-
-      <div className="hidden sm:block w-px h-8 bg-white/10 rounded" />
-
-      <div className="flex items-center gap-3">
-        <div
-          className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
-          style={{ background: "rgba(139,92,246,0.15)", border: "1px solid rgba(139,92,246,0.28)" }}
-        >
-          <UserRound className="w-4 h-4 text-violet-400" />
-        </div>
-        <div className="text-left">
-          <p className="text-white/80 font-bold text-xl leading-none tabular-nums">
-            {formatCount(yourVisits)}
-          </p>
-          <p className="text-violet-400/60 text-xs mt-0.5 font-medium">Your Visits</p>
-        </div>
+      <div className="text-left">
+        <p className="text-white/80 font-bold text-xl leading-none tabular-nums">
+          {totalViews === null ? (
+            <span className="inline-block w-12 h-5 rounded bg-white/10 animate-pulse align-middle" />
+          ) : (
+            formatCount(totalViews)
+          )}
+        </p>
+        <p className="text-indigo-400/60 text-xs mt-0.5 font-medium">Total Page Views</p>
       </div>
     </div>
   );
