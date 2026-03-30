@@ -2,10 +2,10 @@
   "version": 2,
   "builds": [
     {
-      "src": "./artifacts/rules-page/package.json",
+      "src": "artifacts/rules-page/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "outputDirectory": "dist/public"
+        "distDir": "dist/public"
       }
     }
   ],
