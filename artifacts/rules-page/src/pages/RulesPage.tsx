@@ -212,17 +212,15 @@ const penalties = [
 ];
 
 const admins = [
-  { name: "Leo (The Goat)", role: "Head Admin • Comments Section & Community Admin" },
-  { name: "Lucky", role: "Head Admin • Site Contributor" },
-  { name: "Verxix", role: "Head Admin • Content & Site" },
-  { name: "Spike", role: "Head Admin • Designer" },
+  { name: "Leo (The Goat)", role: "Head Staff • Comments Section & Community Admin" },
+  { name: "Lucky", role: "Head Staff • Site Contributor" },
+  { name: "Verxix", role: "Head Staff • Content & Site" },
+  { name: "Spike", role: "Head Staff • Designer" },
 ];
 
 const mods = [
   { name: "Zero", role: "Senior Admin" },
   { name: "Shadow Jp", role: "Comment Moderator" },
-  { name: "", role: "Comment Moderator" },
-  { name: "", role: ""},
   ];
 
 function GlassCard({ children, style, className = "" }: { children: React.ReactNode; style?: React.CSSProperties; className?: string }) {
@@ -396,7 +394,7 @@ export default function RulesPage() {
             <div className="w-8 h-8 rounded-xl flex items-center justify-center shrink-0" style={{ background: "rgba(250,204,21,0.12)", border: "1px solid rgba(250,204,21,0.22)", backdropFilter: "blur(12px)" }}>
               <Crown className="w-4 h-4 text-yellow-400" />
             </div>
-            <h2 className="text-base font-bold tracking-tight text-white/90">Staff & Moderation Team</h2>
+            <h2 className="text-base font-bold tracking-tight text-white/90">Head Staff & Moderation Team</h2>
           </div>
 
           <div className="mb-5">
@@ -429,7 +427,7 @@ export default function RulesPage() {
           <div>
             <div className="flex items-center gap-2 mb-3 pl-1">
               <ShieldHalf className="w-3 h-3 text-indigo-400/60" />
-              <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400/60">Admin & Comment Moderators Team</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400/60">Senior Admin & Comment Moderators Team</p>
             </div>
             <div className="grid sm:grid-cols-4 gap-3">
               {mods.map((member, i) => (
