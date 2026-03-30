@@ -91,6 +91,16 @@ Generated Zod schemas from the OpenAPI spec (e.g. `HealthCheckResponse`). Used b
 
 Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHealthCheck`, `healthCheck`).
 
+### `artifacts/rules-page` (`@workspace/rules-page`)
+
+React + Vite comment section rules page for AniKage anime site.
+
+- Dark theme inspired by AniKage.cc (deep navy/charcoal with indigo accent)
+- Sections: General Conduct, Comment Content, Misinformation & Piracy, Username & Profile, Staff Interactions, Positive Community
+- Enforcement & Penalties section (Warning → Mute → Temp Ban → Perm Ban)
+- Discord invite link for timeout/ban appeals
+- The Discord invite URL is defined in `src/pages/RulesPage.tsx` as `DISCORD_INVITE` constant — update it with the real link
+
 ### `scripts` (`@workspace/scripts`)
 
 Utility scripts package. Each script is a `.ts` file in `src/` with a corresponding npm script in `package.json`. Run scripts via `pnpm --filter @workspace/scripts run <script>`. Scripts can import any workspace package (e.g., `@workspace/db`) by adding it as a dependency in `scripts/package.json`.
