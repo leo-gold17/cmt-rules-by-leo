@@ -429,7 +429,7 @@ export default function RulesPage() {
           <div>
             <div className="flex items-center gap-2 mb-3 pl-1">
               <ShieldHalf className="w-3 h-3 text-indigo-400/60" />
-              <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400/60">Comment Moderators</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400/60">Admin & Comment Moderators Team</p>
             </div>
             <div className="grid sm:grid-cols-4 gap-3">
               {mods.map((member, i) => (
